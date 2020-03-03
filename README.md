@@ -7,7 +7,7 @@ The aim is to run a series of tasks as quickly as possible, threading where appl
 If we had:
 
 ```
-Task A  -> Task B
+Task A -> Task B
 Task C
 ```
 
@@ -20,11 +20,11 @@ Thread 2: Task C
 
 ## Why TBB?
 
-TBB already provides the functionality we need in its Flow Graph. Moreover, TBB is a relatively lightweight library that is commonly used for other threading tasks, so it would be likely we use it in other parts of the code, e.g. for its `parallel_for`.
+TBB already provides the functionality we need, with its Flow Graph. Moreover, TBB is a relatively lightweight library that is commonly used for other threading tasks, e.g. for its `parallel_for`.
 
 ## Build and install
 
-This example uses CMake. From the root directory:
+This example uses CMake to build. From the root directory:
 
 ```
 cmake -H. -Bbuild
@@ -32,7 +32,7 @@ cmake --build build -j8
 ./bin/simplescheduler
 ```
 
-There is also a Dockerfile to set up the required C++ environment and build the project:
+Alternatively, there is also a Dockerfile to set up the required C++ environment and build the project:
 
 ```
 docker build --rm -f "Dockerfile" -t glorion13/simplescheduler:latest "."
