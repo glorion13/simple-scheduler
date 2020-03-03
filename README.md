@@ -14,7 +14,7 @@ Task C
 We expect:
 
 ```
-Thread  1: Task A followed by Task B
+Thread 1: Task A followed by Task B
 Thread 2: Task C
 ```
 
