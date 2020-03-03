@@ -32,4 +32,10 @@ cmake --build build -j8
 ./bin/simplescheduler
 ```
 
-There is also a Dockerfile to set up the required C++ environment and build the project.
+There is also a Dockerfile to set up the required C++ environment and build the project:
+
+```
+docker build --rm -f "Dockerfile" -t glorion13/simplescheduler:latest "."
+docker run --rm -it glorion13/simplescheduler:latest
+```
+
